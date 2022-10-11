@@ -1,4 +1,6 @@
 class TodosController < ApplicationController
+  before_action :authenticate_user!
+  before_action :set_goal
   before_action :set_todo, only: [:show, :edit, :update, :destro, :sort]
 
 
